@@ -34,7 +34,7 @@ CensusTracts <- "tl_2018_17_tract.shp"
 ChicagoCensusTracts <- "ChicagoBoundaries.shp"
 Rideshare_Chicago <- "ChicagoRideshareNovember2018.rds"
 CountyFP <- as.character("031")
-ReducedCalendarDays <- 1:7
+ReducedCalendarDays <- 1:14
 k <- 4
 
 #Reading data
@@ -69,7 +69,7 @@ ReducedRideshareChicago <- isWeekend(ReducedRideshareChicago)
 
 ## Ride-sharing in Chicago
 
-In this markdown, I will look at ride-sharing data provided by the city of Chicago, IL for the first week of November 2018. The entire data set up till May 2019 is approximately 6.5GB. In the interest of time and limited processing power, I decided to just look at the a small segment of the entire dataset, which in itself is not insignificant.  
+In this markdown, I will look at ride-sharing data provided by the city of Chicago, IL for the first two weeks of November 2018. The entire data set up till May 2019 is approximately 6.5GB. In the interest of time and limited processing power, I decided to just look at the a small segment of the entire dataset, which in itself is not insignificant.  
 
 Chicago (brown) is located in Cook County, IL as shown in the map below.   
 
@@ -159,7 +159,7 @@ TractCounts$CensusTracts <- as.character(TractCounts$CensusTracts)
 Ridercounts <- left_join(ChicagoCensusTracts, TractCounts, by = c("geoid10" = "CensusTracts"))
 Ridercounts[is.na(Ridercounts)] <- 0
 ```
-Based on the `fivenum` summaries below, 75% of all census tracts had less than 50 pick-ups and drop-offs in the first 7 days of November 2018.
+Based on the `fivenum` summaries below, 75% of all census tracts had less than 50 pick-ups and drop-offs in the first 14 days of November 2018.
 
 ```{r fivenum}
 fivenum(Ridercounts$Pickup)

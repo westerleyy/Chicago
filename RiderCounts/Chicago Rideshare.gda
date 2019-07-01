@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <title>Chicago Rideshare</title>
+    <layers>
+        <layer>
+            <datasource>
+                <type>ESRI Shapefile</type>
+                <path>Chicago Rideshare.shp</path>
+            </datasource>
+            <layername>Chicago Rideshare</layername>
+            <title/>
+            <variable_order>
+                <time_ids>
+                    <id>time 0</id>
+                </time_ids>
+                <var>commare</var>
+                <var>commr_n</var>
+                <var>cntyf10</var>
+                <var>geoid10</var>
+                <var>name10</var>
+                <var>nmlsd10</var>
+                <var>notes</var>
+                <var>sttfp10</var>
+                <var>trctc10</var>
+                <var>Cnss_Tr</var>
+                <var>Pickup</var>
+                <var>Dropoff</var>
+            </variable_order>
+            <custom_classifications/>
+            <weights_entries>
+                <weights>
+                    <title>Chicago Rideshare</title>
+                    <default/>
+                    <meta_info>
+                        <weights_type>custom</weights_type>
+                        <path>SpatialMatrices\Chicago Rideshare.gal</path>
+                        <id_variable>geoid10</id_variable>
+                        <symmetry>unknown</symmetry>
+                        <num_observations>801</num_observations>
+                        <min_neighbors>1</min_neighbors>
+                        <max_neighbors>18</max_neighbors>
+                        <mean_neighbors>6.554307116104869</mean_neighbors>
+                        <median_neighbors>7</median_neighbors>
+                        <non_zero_perc>0.8182655575661509</non_zero_perc>
+                    </meta_info>
+                </weights>
+            </weights_entries>
+            <default_vars>
+                <default_var>
+                    <name>Dropoff</name>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+            </default_vars>
+        </layer>
+    </layers>
+</project>
